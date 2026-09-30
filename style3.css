@@ -1,0 +1,45 @@
+a {
+  position: relative;
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: blue;
+  transition: 0.3s;
+}
+a:hover::after {
+  width: 100%;
+}
+
+blockquote::before {
+  content: "«";
+}
+blockquote::after {
+  content: "»";
+}
+
+a[href^="http"]::before {
+  content: "↗ ";
+}
+.card {
+  position: relative;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+ol {
+  counter-reset: num;
+}
+li {
+  counter-increment: num;
+}
+li::before {
+  content: counter(num) ") ";
+}
