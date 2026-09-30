@@ -1,0 +1,22 @@
+li:nth-child(odd) {
+  background-color: #f3f4f6;
+}
+
+li:nth-child(3n) {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+li:first-child {
+  border-top: 3px solid #4f46e5;
+  color: #4f46e5;
+}
+
+li:last-child {
+  border-bottom: 3px solid #4f46e5;
+  color: #4f46e5;
+}
+
+li:nth-last-child(2) {
+  display: none;
+}
