@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #6366f1;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointter;
+}
+
+.card-bad {
+  top: 0;
+  transition:
+    top 0.4s ease,
+    width 0.4s ease,
+    height 04s ease;
+}
+
+.card-bad:hover {
+  top: -10px;
+  width: 220px;
+  height: 220px;
+}
+.card-good {
+  transition: transform 0.4s ease;
+}
+.card-good:hover {
+  transform: translateY(-10px) scale(1.1);
+}
