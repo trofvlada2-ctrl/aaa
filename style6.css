@@ -1,0 +1,108 @@
+.button {
+  padding: 10px 20px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #4338ca;
+}
+button:active {
+  background: #3730a3;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+a {
+  position: relative;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #4f46e5;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+.card {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.gallery img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+input {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #4f46e5;
+}
+
+input:not(:placeholder-shown):valid {
+  border-color: green;
+}
+input:not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+
+  summary::after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+  }
+
+  details[open] summary::after {
+    content: "−";
+  }
+
+  /* 7. ФОКУС ДЛЯ ВСІХ ЕЛЕМЕНТІВ (Клавіатурна навігація) */
+  :focus-visible {
+    outline: 3px solid #4f46e5 !important;
+    outline-offset: 2px !important;
+  }
+}
